@@ -1,0 +1,237 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+   font-family: 'Segoe UI', Arial;
+}
+
+.login {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url("../assets/finalLogin.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+
+   .container{
+      height: 85%;
+      width: 80%;
+      padding: 2rem 3rem;
+      display: flex;
+      background-color: white;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      .main_img_box{
+         flex: 1.5;
+         overflow: hidden;
+         border-radius: 1rem;
+         
+         .main_img{
+            height: 76vh;
+         }
+      }
+
+      .login_box{
+         flex: 1;
+
+         .top{
+
+            padding: 0 2rem 0 2rem;
+
+            .heading{
+               font-size: 2.5vh;
+            }
+   
+            form{
+               background-color: white;
+               padding: 5vh 1rem 0 0.3rem;
+               
+               .inputs{
+                  margin-bottom: 5vh;
+               }
+   
+               label{
+                  display: block;
+                  width: 100%;
+                  margin-bottom: 0.4rem;
+                  font-size: 2vh;
+               }
+
+               input{
+                  display: block;
+                  width: 100%;
+                  padding: 1.6vh 1rem;
+                  outline: none;
+                  border: none;
+                  background-color: #EAF4FF;
+                  border-radius: 0.3rem;
+                  font-size: 1.8vh;
+               }
+
+               .forgot{
+                  display: flex;
+                  justify-content: flex-end;
+               
+                  a{
+                     text-decoration: none;
+                     color: #0075FF;
+                     font-size: 1.8vh;
+                     margin-top: 0.3rem;
+                  }
+               }
+
+               .btn_box{
+                  display: flex;
+                  justify-content: center;
+
+                  button{
+                     padding: 0.4rem 2.5rem; 
+                     background-color: #0075FF; 
+                     color: white;
+                     outline: none;
+                     border: none;
+                     border-radius: 0.3rem;
+                     font-size: 2vh;
+                     font-weight: bold;
+                     cursor: pointer;
+                     transition: all 0.4s ease-in;
+
+                     &:hover {
+                        background-color: #005eca;
+                     }
+                  }
+               }
+               
+            }
+
+         }
+
+         .connect{
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 4.5vh;
+            color: #525252CC;
+            display: flex;
+            align-items: center;
+
+            .left_line, .right_line{
+               display: block;
+               flex: 1;
+               background-color: #52525242;
+               height: 0.1px;
+            }
+
+            .middle{
+               padding: 0 2rem;
+            }
+         
+         }
+         
+         .social_box{
+            margin: 0 auto;
+            padding: 2vh 1rem;
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            
+
+            img{
+               height: 3vh;
+               cursor: pointer;
+               transition: all 0.4s ease-in;
+
+               &:hover {
+                  transform: scale(1.2);
+               }
+            }
+         }
+
+         .signup{
+            padding: 4.5vh;
+            text-align: center;
+            font-size: 2.1vh;
+
+            a{
+               text-decoration: none;
+               color: #1E85FF;
+               font-weight: bold;
+            }
+         }
+      }
+   }
+}
+
+
+
+// ipad
+@media (max-width: 1024px) and (orientation: portrait) {
+   .login {
+      .container {
+         height: 80%;
+         width: 80%;
+         padding: 3rem 4rem;
+
+         .main_img_box {
+            display: none;
+         }
+
+         .login_box {
+            .top {
+               form {
+                  padding: 5vh 0;
+               }
+            }
+
+            .connect {
+               font-size: 2vw;
+            }
+
+            .signup {
+               font-size: 3vw;
+            }
+         }
+
+      }
+   }
+}
+
+
+// mobile device
+@media (max-width: 600px) and (orientation: portrait) {
+   .login {
+      .container {
+         height: 100%;
+         width: 100%;
+         border-radius: 0;
+         padding: 3rem 2rem;
+
+         .main_img_box {
+            display: none;
+         }
+
+         .login_box {
+            .top {
+               form {
+                  padding: 5vh 0;
+               }
+            }
+
+            .signup {
+               font-size: 4vw;
+            }
+         }
+
+      }
+   }
+}
